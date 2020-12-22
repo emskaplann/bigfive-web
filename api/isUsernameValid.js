@@ -1,8 +1,17 @@
 const Twitter = require("twitter");
 
-module.exports = (req, res) => {
-  const { username } = req.params;
+const twitter_consumer_key = process.env.TWITTER_CONSUMER_KEY
+const twitter_consumer_secret = process.env.TWITTER_CONSUMER_SECRET
+const twitter_access_token_key = process.env.TWITTER_ACCESS_TOKEN_KEY
+const twitter_access_token_secret = process.env.TWITTER_ACCESS_TOKEN_SECRET
+console.log(twitter_consumer_key)
+console.log(twitter_consumer_secret)
+console.log(twitter_access_token_key)
+console.log(twitter_access_token_secret)
 
+module.exports = (req, res) => {
+  const { query: { username } } = req;
+  console.log(req)
   if (!username) {
     return res
       .status(400)
@@ -11,10 +20,10 @@ module.exports = (req, res) => {
 
   // console.log("New request to validate " + username);
   const client = new Twitter({
-    consumer_key: process.env.TWITTER_CONSUMER_KEY,
-    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+    consumer_key: twitter_consumer_key,
+    consumer_secret: twitter_consumer_secret,
+    access_token_key: twitter_access_token_key,
+    access_token_secret: twitter_access_token_secret
   });
   const params = { screen_name: username };
   client

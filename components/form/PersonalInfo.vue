@@ -104,10 +104,18 @@ export default {
   },
   methods: {
     ...mapMutations(['SET_AGE', 'SUBMIT_FORM', 'SET_TWITTER_USERNAME', 'SET_GENDER']),
+    checkTwHandle: async function (username) {
+      const twHandleCheck = await this.$axios.$post(process.env.API_URL + 'is-username-valid/', username)
+      return twHandleCheck
+    },
     checkForm: function (e) {
       this.errors = []
       if (!this.twitterUsername) {
         this.errors.push(this.$t('form.twitterErr'))
+        const checkResult = this.checkTwHandle(this.twitterUsername)
+        if (checkResult.message) {
+          this.errors.push('Girdiğiniz Twitter Adresi gerçek değil.')
+        }
       }
       if (this.age < 15) {
         this.errors.push(this.$t('form.ageErr'))
