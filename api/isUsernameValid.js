@@ -4,10 +4,6 @@ const twitter_consumer_key = process.env.TWITTER_CONSUMER_KEY
 const twitter_consumer_secret = process.env.TWITTER_CONSUMER_SECRET
 const twitter_access_token_key = process.env.TWITTER_ACCESS_TOKEN_KEY
 const twitter_access_token_secret = process.env.TWITTER_ACCESS_TOKEN_SECRET
-console.log(twitter_consumer_key)
-console.log(twitter_consumer_secret)
-console.log(twitter_access_token_key)
-console.log(twitter_access_token_secret)
 
 module.exports = (req, res) => {
   const { query: { username } } = req;

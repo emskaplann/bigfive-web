@@ -93,6 +93,7 @@ export default {
     twitterUsername: '',
     gender: '',
     isFormValid: false,
+    isLoading: false,
     errors: [],
     rules: {
       required: name => !name ? 'Lütfen geçerli bir Twitter adresi girin' : ''
@@ -105,14 +106,20 @@ export default {
   methods: {
     ...mapMutations(['SET_AGE', 'SUBMIT_FORM', 'SET_TWITTER_USERNAME', 'SET_GENDER']),
     checkTwHandle: async function (username) {
-      const twHandleCheck = await this.$axios.$post(process.env.API_URL + 'is-username-valid/', username)
+      const twHandleCheck = await this.$axios.$get(process.env.API_URL + 'is-username-valid/' + username)
       return twHandleCheck
     },
-    checkForm: function (e) {
+    checkForm: async function (e) {
+      e.preventDefault()
       this.errors = []
       if (!this.twitterUsername) {
         this.errors.push(this.$t('form.twitterErr'))
-        const checkResult = this.checkTwHandle(this.twitterUsername)
+      }
+      if (this.twitterUsername) {
+        if (this.twitterUsername.includes('@')) {
+          this.twitterUsername = this.twitterUsername.slice(1)
+        }
+        const checkResult = await this.checkTwHandle(this.twitterUsername)
         if (checkResult.message) {
           this.errors.push('Girdiğiniz Twitter Adresi gerçek değil.')
         }
@@ -130,8 +137,6 @@ export default {
         this.SET_GENDER(this.gender)
         this.SUBMIT_FORM()
       }
-
-      e.preventDefault()
     }
   }
 }
