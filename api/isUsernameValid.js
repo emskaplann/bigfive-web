@@ -9,12 +9,12 @@ module.exports = (req, res) => {
       .json({ type: "error", message: "No username in req params" });
   }
 
-  console.log("New request to validate " + username);
+  // console.log("New request to validate " + username);
   const client = new Twitter({
-    consumer_key: process.env.VUE_APP_consumer_key,
-    consumer_secret: process.env.VUE_APP_consumer_secret,
-    access_token_key: process.env.VUE_APP_access_token_key,
-    access_token_secret: process.env.VUE_APP_access_token_secret
+    consumer_key: process.env.TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
   });
   const params = { screen_name: username };
   client
