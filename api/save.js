@@ -33,16 +33,13 @@ module.exports = async (req, res) => {
     const db = await connectToDb()
     const collection = db.collection(dbCollection)
     if (ipAdd) {
-      const geoLocationResp = await fetch(`http://www.geoplugin.net/json.gp?ip=${ipAdd}`)
+      // const geoLocationResp = await fetch(`http://www.geoplugin.net/json.gp?ip=${ipAdd}`)
+      const geoLocationResp = await fetch(`https://api.ipregistry.co/${ipAdd}?key=${process.env.IP_API_KEY}`)
       const geoLocations = await geoLocationResp.json()
-      payload['city'] = geoLocations['geoplugin_city']
-      payload['region'] = geoLocations['geoplugin_region']
-      payload['country'] = geoLocations['geoplugin_countryName']
-      payload['areacode'] = geoLocations['geoplugin_areaCode']
-      payload['dmacode'] = geoLocations['geoplugin_dmaCode']
-      payload['continentcode'] = geoLocations['geoplugin_continentCode']
-      payload['latitude'] = geoLocations['geoplugin_latitude']
-      payload['longitude'] = geoLocations['geoplugin_longitude']
+      payload['city'] = geoLocations['location']['city']
+      payload['postal'] = geoLocations['location']['postal']
+      payload['country'] = geoLocations['location']['country']['name']
+      payload['area'] = geoLocations['time_zone']['id']
       payload['ipaddress'] = ipAdd
 
     }
