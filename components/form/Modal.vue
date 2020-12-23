@@ -41,6 +41,8 @@
           <br><br>
           Lütfen şahsi ve aktif olarak kullandığınız Twitter Adresinizi giriniz, kazananlarla verdikleri Twitter Adresi üzerinden iletişime geçilecektir.
           <br><br>
+          Ek olarak, sonuçlarınıza sonradan ulaşabilmeniz için testi çözdükten en geç 10 dk sonra verdiğiniz Twitter Adresine '@kendinitani2020' hesabından sonucunuzun linkini içeren bir mesaj gönderilecektir.
+          <br><br>
           Kişilik testi sonucunun tutarlı olması için lütfen özveri ile çözünüz.
           <br><br>
           <b>Son Katılım Tarihi:</b> <u>05/01/2021</u>

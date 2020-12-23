@@ -39,6 +39,7 @@
           <b>{{ $t('results.important') }}</b> {{ $t('results.saveResults') }} {{ $t('results.toOthers') }} <nuxt-link :to="localePath('compare')">
             {{ $t('results.compare') }}.
           </nuxt-link>
+          Ek olarak bize verdiğiniz twitter adresine bu sonuç sayfasının linkini en geç 10 dakika içinde göndereceğiz. <u>Mesajı görmek için Twitter Hesabınızdan mesaj isteklerine bakmanız gerekiyor.</u>
           <br>
           <br>
           <v-alert

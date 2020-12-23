@@ -18,7 +18,7 @@ export default {
       text2: 'Beş alanda diğer insanlarla arandaki farkı öğren:',
       action: 'Kendin dene'
     },
-    share: 'Arkadaşlarınla paylaş ve ne kadar uyumlu olduğunuzu öğren',
+    share: 'Arkadaşlarınla paylaş ve ne kadar uyumlu olduğunuzu öğren!',
     cards: {
       open: {
         title: 'Farkındalık',
@@ -182,7 +182,7 @@ export default {
     important: 'Önemli!',
     saveResults: "Sonradan sonuçlarını görmek için burda gördüğün ID'yi kaydet veya ",
     compare: 'karşılaştır',
-    toOthers: 'kendini başkalarıyla',
+    toOthers: "kendini başkalarıyla bu ID'yi kullanarak ",
     seo: {
       title: 'Big Five Kişilik Testi Sonuçlarım',
       description: 'Kişiliğini derinden gör ve kendini başkalarıyla bu beş alanda karşılaştır: Duygusal Denge, Yeni Deneyimlere Açıklık, Öz-denetim, Dışadönüklük, Yumuşak Başlılık'
