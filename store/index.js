@@ -117,6 +117,11 @@ export const mutations = {
       state.form.gender &&
       state.form.egitim) {
       state.slide++
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      })
     }
   },
   SET_TWITTER_USERNAME: (state, twitterUsername) => {

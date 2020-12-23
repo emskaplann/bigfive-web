@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card v-if="!loading">
     <v-card-title>
       <v-icon
         large
@@ -104,6 +104,16 @@
       </v-card-actions>
     </v-form>
   </v-card>
+  <div
+    v-else
+    class="text-center"
+  >
+    <v-progress-circular
+      indeterminate
+      color="secondary"
+      size="128"
+    />
+  </div>
 </template>
 
 <script>
@@ -127,18 +137,19 @@ export default {
       required: name => !name ? 'Lütfen geçerli bir Twitter adresi girin' : ''
     }
   }),
-  computed: mapState(['form']),
+  computed: mapState(['form', 'loading']),
   mounted () {
     this.$amplitude.getInstance().logEvent('b5.form', { part: 'personal' })
   },
   methods: {
-    ...mapMutations(['SET_AGE', 'SUBMIT_FORM', 'SET_TWITTER_USERNAME', 'SET_GENDER', 'SET_EGITIM']),
+    ...mapMutations(['SET_AGE', 'SUBMIT_FORM', 'SET_TWITTER_USERNAME', 'SET_GENDER', 'SET_EGITIM', 'SET_LOADING']),
     checkTwHandle: async function (username) {
       const twHandleCheck = await this.$axios.$get(process.env.API_URL + 'is-username-valid/' + username)
       return twHandleCheck
     },
     checkForm: async function (e) {
       e.preventDefault()
+      this.SET_LOADING(true)
       this.errors = []
       if (!this.twitterUsername) {
         this.errors.push(this.$t('form.twitterErr'))
@@ -161,13 +172,19 @@ export default {
       if (!this.egitim) {
         this.errors.push('Lütfen eğitim durumunuzu belirtiniz, sonuçlarınız için önemlidir.')
       }
-
+      this.SET_LOADING(false)
       if (!this.errors.length) {
         this.SET_AGE(this.age)
         this.SET_TWITTER_USERNAME(this.twitterUsername)
         this.SET_GENDER(this.gender)
         this.SET_EGITIM(this.egitim)
         this.SUBMIT_FORM()
+      } else {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        })
       }
     }
   }
