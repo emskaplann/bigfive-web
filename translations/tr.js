@@ -38,7 +38,7 @@ export default {
       }
     },
     description: {
-      top: 'Dünya otoritelerince kabul edilmiş Big Five Kişilik Testi ile kendini hiç olmadığı kadar iyi tanı.',
+      top: 'Dünya otoritelerince kabul edilmiş Big Five Kişilik Testi ile kendini hiç olmadığı kadar iyi tanı!',
       subtop: '',
       subtop2: ' insanların kişiliğini ölçmek için bilimsel olarak test edilmiş ve en çok onaylanan aynı zamanda güvenilir olan psikolojik bir modeldir.',
       reference: `Test ve ölçme algoritması bu siteden alınmıştır

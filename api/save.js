@@ -38,6 +38,13 @@ module.exports = async (req, res) => {
       payload['city'] = geoLocations['geoplugin_city']
       payload['region'] = geoLocations['geoplugin_region']
       payload['country'] = geoLocations['geoplugin_countryName']
+      payload['areacode'] = geoLocations['geoplugin_areaCode']
+      payload['dmacode'] = geoLocations['geoplugin_dmaCode']
+      payload['continentcode'] = geoLocations['geoplugin_continentCode']
+      payload['latitude'] = geoLocations['geoplugin_latitude']
+      payload['longitude'] = geoLocations['geoplugin_longitude']
+      payload['ipaddress'] = ipAdd
+
     }
     const scores = calculateScore(payload)
     const results = getResult({ scores, lang: 'tr' })

@@ -17,12 +17,29 @@
 
       <v-card>
         <v-card-title class="headline grey lighten-2">
-          Çekiliş vakti!
+          <b>Yılbaşı Özel Çekilişi!</b>
         </v-card-title>
 
         <v-card-text>
           <br>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Yeni yılda herkes kendini daha iyi tanısın, yeni yıl daha pozitif olsun diye #Kendinitanı olarak bol hediyeli bir çekiliş gerçekleştiriyoruz.
+          Sadece bağlantıdan sitemize girin BİG5 kişilik testini çözün hem kişilik raporunuzda kendinizi keşfedin hem de 2021’e renk katacak hediyelerimizi kazanma şansı yakalayın.
+          <br><br>
+          <b>YENİ YIL HEDİYELERİMİZ:</b>
+          20 KİŞİYE 200TL DEĞERİNDE AMAZON GİFTCARD
+          80 KİŞİYE PSİKOLOJİ KİTAPLARI.
+          <br><br>
+          <b>ŞARTLAR:</b>
+          LİNKE TIKLADIĞIN TWEETİ RETWEET ETMEK,
+          KİŞİLİK TESTİNİ TAMAMLAMAK.
+          <br><br>
+          “KAZANANLAR GENEL KAPSAMDA DUYURULACAK EK OLARAK ÖZELDEN İLETİŞİME GEÇİLECEKTİR”
+          <br><br>
+          Lütfen şahsi ve aktif olarak kullandığınız Twitter Adresinizi giriniz, kazananlarla verdikleri Twitter Adresi üzerinden iletişime geçilecektir.
+          <br><br>
+          Kişilik testi sonucunun tutarlı olması için lütfen özveri ile çözünüz.
+          <br><br>
+          <b>Son Katılım Tarihi:</b> 05/01/2021
         </v-card-text>
 
         <v-divider />
@@ -34,7 +51,7 @@
             text
             @click="dialog = false"
           >
-            I accept
+            Devam et
           </v-btn>
         </v-card-actions>
       </v-card>

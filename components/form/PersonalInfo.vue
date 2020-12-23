@@ -65,6 +65,33 @@
             :on-icon="mdiRadioboxMarked"
           />
         </v-radio-group>
+        <br>
+        <p>Eğitim Durumunuz</p>
+        <v-radio-group
+          v-model="egitim"
+        >
+          <v-radio
+            label="İlkokul"
+            color="secondary"
+            value="ilkokul"
+            :off-icon="mdiRadioboxBlank"
+            :on-icon="mdiRadioboxMarked"
+          />
+          <v-radio
+            label="Lise"
+            color="secondary"
+            value="lise"
+            :off-icon="mdiRadioboxBlank"
+            :on-icon="mdiRadioboxMarked"
+          />
+          <v-radio
+            label="Yüksek Öğretim"
+            color="secondary"
+            value="yükseköğretim"
+            :off-icon="mdiRadioboxBlank"
+            :on-icon="mdiRadioboxMarked"
+          />
+        </v-radio-group>
       </v-card-text>
       <v-card-actions>
         <v-spacer />
@@ -72,7 +99,7 @@
           color="secondary"
           type="submit"
         >
-          Next
+          Devam et
         </v-btn>
       </v-card-actions>
     </v-form>
@@ -92,6 +119,7 @@ export default {
     age: 0,
     twitterUsername: '',
     gender: '',
+    egitim: '',
     isFormValid: false,
     isLoading: false,
     errors: [],
@@ -104,7 +132,7 @@ export default {
     this.$amplitude.getInstance().logEvent('b5.form', { part: 'personal' })
   },
   methods: {
-    ...mapMutations(['SET_AGE', 'SUBMIT_FORM', 'SET_TWITTER_USERNAME', 'SET_GENDER']),
+    ...mapMutations(['SET_AGE', 'SUBMIT_FORM', 'SET_TWITTER_USERNAME', 'SET_GENDER', 'SET_EGITIM']),
     checkTwHandle: async function (username) {
       const twHandleCheck = await this.$axios.$get(process.env.API_URL + 'is-username-valid/' + username)
       return twHandleCheck
@@ -130,11 +158,15 @@ export default {
       if (!this.gender) {
         this.errors.push(this.$t('form.genderErr'))
       }
+      if (!this.egitim) {
+        this.errors.push('Lütfen eğitim durumunuzu belirtiniz, sonuçlarınız için önemlidir.')
+      }
 
       if (!this.errors.length) {
         this.SET_AGE(this.age)
         this.SET_TWITTER_USERNAME(this.twitterUsername)
         this.SET_GENDER(this.gender)
+        this.SET_EGITIM(this.egitim)
         this.SUBMIT_FORM()
       }
     }

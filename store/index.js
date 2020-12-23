@@ -19,6 +19,7 @@ const getDefaultState = () => ({
     name: '',
     language: 'tr',
     gender: '',
+    egitim: '',
     accepted: false,
     twitterUsername: '',
     country: '',
@@ -94,6 +95,9 @@ export const mutations = {
   SET_GENDER: (state, gender) => {
     state.form.gender = gender
   },
+  SET_EGITIM: (state, egitim) => {
+    state.form.egitim = egitim
+  },
   SET_NAME: (state, name) => {
     state.form.name = name
   },
@@ -110,7 +114,8 @@ export const mutations = {
     if (
       state.form.twitterUsername &&
       state.form.age > 15 &&
-      state.form.gender) {
+      state.form.gender &&
+      state.form.egitim) {
       state.slide++
     }
   },
@@ -208,7 +213,8 @@ export const actions = {
         dateStamp: Date.now(),
         age: context.state.form.age,
         twitterUsername: context.state.form.twitterUsername,
-        gender: context.state.form.gender
+        gender: context.state.form.gender,
+        egitim: context.state.form.egitim
       }
 
       const { id } = await this.$axios.$post(process.env.API_URL + 'save', result)

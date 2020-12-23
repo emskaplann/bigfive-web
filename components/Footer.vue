@@ -23,7 +23,7 @@
           Herhangi bir konu hakkında sorunuz mu var?
         </h3>
         Lütfen bizimle <a
-          href="mailto:bigfive-test@rubynor.com"
+          href="mailto:info@test-mypersonality.com"
           rel="noopener noreferrer"
           target="_blank"
         >buradan</a> iletişime geçin.

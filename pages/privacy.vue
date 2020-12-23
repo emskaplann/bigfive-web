@@ -45,7 +45,7 @@
     <span class="grey--text">Örnek: "Sonuçların 66%'sı yeniliğe açık kişilik tipi çıkmıştır. -> Yeniliğe açık kişilik tipindeki bireyler bu tarz testlere daha fazla rağbet göstermektedir."</span>
     <h2>İletişim</h2>
     Gizlilik politikası hakkında herhangi bir sorunuz var ise, lütfen bizimle <a
-      href="mailto:bigfive-test@rubynor.com"
+      href="mailto:info@test-mypersonality.com"
       rel="noopener noreferrer"
       target="_blank"
     >buradan</a> iletişime geçin.
