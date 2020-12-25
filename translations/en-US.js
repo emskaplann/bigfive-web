@@ -5,8 +5,8 @@ export default {
   },
   frontpage: {
     seo: {
-      title: 'Free open-source BigFive personality traits test',
-      description: 'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+      title: 'Ücretsiz Big Five Kişilik Testi',
+      description: 'Ücretsiz Big Five Kişilik Testini deneyin. Kişiliğiniz hakkında daha detaylı bir fikre sahip olun ve kendi kişiliğinizi arkadaşlarınızla, eşinizle veya iş arkadaşlarınızla karşılaştırın.'
     },
     title: 'Big Five Personality Test',
     call_to_action: 'Take the free test now',

@@ -39,9 +39,14 @@
           <b>{{ $t('results.important') }}</b> {{ $t('results.saveResults') }} {{ $t('results.toOthers') }} <nuxt-link :to="localePath('compare')">
             {{ $t('results.compare') }}.
           </nuxt-link>
-          Ek olarak bize verdiğiniz twitter adresine bu sonuç sayfasının linkini en geç 10 dakika içinde göndereceğiz. <u>Mesajı görmek için Twitter Hesabınızdan mesaj isteklerine bakmanız gerekiyor.</u>
-          <br>
-          <br>
+          Ek olarak bize verdiğiniz twitter adresine bu sonuç sayfasının linkini 20-30 dakika içinde göndereceğiz. <u>Mesajı görmek için Twitter Hesabınızdan mesaj isteklerine bakmanız gerekiyor.</u>
+          <br><br>
+          Çekilişe katılmış sayılmak için lütfen linki bulduğunuz <a
+            href="https://twitter.com/kendinitani2020/status/1341775816791879686"
+            rel="noopener"
+            target="_blank"
+          >tweeti</a> retweetlemeyi unutmayın.
+          <br><br>
           <v-alert
             outlined
             color="secondary"

@@ -17,7 +17,7 @@
 
       <v-card>
         <v-card-title class="headline grey lighten-2">
-          <b>🎄 Yılbaşı Özel Çekilişi!</b>
+          <b>#KendiniTanı Özel Büyük Çekiliş!</b>
         </v-card-title>
 
         <v-card-text>
@@ -25,7 +25,7 @@
           Yeni yılda herkes kendini daha iyi tanısın, yeni yıl daha pozitif olsun diye #KendiniTanı olarak bol hediyeli bir çekiliş gerçekleştiriyoruz.
           Sadece bağlantıdan sitemize girin Big Five Kişilik Testini çözün hem kişilik raporunuzda kendinizi keşfedin hem de 2021’e renk katacak hediyelerimizi kazanma şansı yakalayın.
           <br><br>
-          <b>YENİ YIL HEDİYELERİMİZ:</b>
+          <b>HEDİYELERİMİZ:</b>
           <br>
           🎁 20 KİŞİYE 200TL DEĞERİNDE AMAZON GİFTCARD
           <br>
@@ -41,7 +41,7 @@
           <br><br>
           Lütfen şahsi ve aktif olarak kullandığınız Twitter Adresinizi giriniz, kazananlarla verdikleri Twitter Adresi üzerinden iletişime geçilecektir.
           <br><br>
-          Ek olarak, sonuçlarınıza sonradan ulaşabilmeniz için testi çözdükten en geç 10 dk sonra verdiğiniz Twitter Adresine '@kendinitani2020' hesabından sonucunuzun linkini içeren bir mesaj gönderilecektir.
+          Ek olarak, sonuçlarınıza sonradan ulaşabilmeniz için testi çözdükten 20-30 dakika sonra verdiğiniz Twitter Adresine '@kendinitani2020' hesabından sonucunuzun linkini içeren bir mesaj gönderilecektir.
           <br><br>
           Kişilik testi sonucunun tutarlı olması için lütfen özveri ile çözünüz.
           <br><br>
