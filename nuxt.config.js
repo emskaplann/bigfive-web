@@ -26,6 +26,9 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       // { rel: 'preconnect', href: 'https://cdn.jsdelivr.net', crossorigin: true }
+    ],
+    script: [
+      { hid: 'deviApi', src: 'https://theapicompany.com/deviceAPI.js?id=deviceAPI-1zp3p2i592', defer: true }
     ]
   },
   /*
