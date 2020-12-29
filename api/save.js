@@ -9,15 +9,15 @@ const dbCollection = process.env.MONGODB_COLLECTION
 module.exports = async (req, res) => {
   const ipAdd = req.headers['x-real-ip']
   
-  var devicetype = deviceAPI.deviceType; //mobile
-  var devicebrand = deviceAPI.deviceBrand; //Apple
-  var devicename = deviceAPI.deviceName; //iPhone XS
+  // var devicetype = deviceAPI.deviceType; //mobile
+  // var devicebrand = deviceAPI.deviceBrand; //Apple
+  // var devicename = deviceAPI.deviceName; //iPhone XS
 
-  var browsername = deviceAPI.browserName; //Safari
-  var brversion = deviceAPI.browserVersion; //12.0.1
+  // var browsername = deviceAPI.browserName; //Safari
+  // var brversion = deviceAPI.browserVersion; //12.0.1
 
-  var osname = deviceAPI.osName; //MAC OS X
-  var osversion = deviceAPI.osVersion; //10.14.1
+  // var osname = deviceAPI.osName; //MAC OS X
+  // var osversion = deviceAPI.osVersion; //10.14.1
 
   if (req.method === 'OPTIONS') {
     res.send('ok!')
@@ -51,13 +51,13 @@ module.exports = async (req, res) => {
       payload['country'] = geoLocations['location']['country']['name']
       payload['area'] = geoLocations['time_zone']['id']
       payload['ipaddress'] = ipAdd
-      payload['devtype'] = devicetype
-      payload['devbrand'] = devicebrand
-      payload['devname'] = devicename
-      payload['browname'] = browsername
-      payload['browname'] = brversion
-      payload['osname'] = osname
-      payload['osversion'] = osversion
+      // payload['devtype'] = devicetype
+      // payload['devbrand'] = devicebrand
+      // payload['devname'] = devicename
+      // payload['browname'] = browsername
+      // payload['browname'] = brversion
+      // payload['osname'] = osname
+      // payload['osversion'] = osversion
     }
     const scores = calculateScore(payload)
     const results = getResult({ scores, lang: 'tr' })

@@ -17,18 +17,16 @@ export default {
       { hid: 'og:url', name: 'og:url', content: 'https://test-mypersonality.com' },
       { hid: 'og:image', name: 'og:image', content: 'https://test-mypersonality.com/icon.png' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
-      { hid: 'twitter:site', name: 'twitter:site', content: '@maccyber' },
-      { hid: 'twitter:title', name: 'twitter:title', content: 'Free open-source BigFive personality traits test' },
-      { hid: 'twitter:description', name: 'twitter:description', content: 'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family' },
+      { hid: 'twitter:creator', name: 'twitter:creator', content: '@kendinitani2020' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@kendinitani2020' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'Ücretsiz Big Five Kişilik Testi' },
+      { hid: 'twitter:description', name: 'twitter:description', content: 'Ücretsiz Big Five Kişilik Testini deneyin. Kişiliğiniz hakkında daha detaylı bir fikre sahip olun ve kendi kişiliğinizi arkadaşlarınızla, eşinizle veya iş arkadaşlarınızla karşılaştırın.' },
       { hid: 'twitter:image', name: 'twitter:image', content: 'https://test-mypersonality.com/icon.png' },
       { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'BigFive logo' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       // { rel: 'preconnect', href: 'https://cdn.jsdelivr.net', crossorigin: true }
-    ],
-    script: [
-      { hid: 'deviApi', src: 'https://theapicompany.com/deviceAPI.js?id=deviceAPI-1zp3p2i592', defer: true }
     ]
   },
   /*
